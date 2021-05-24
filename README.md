@@ -56,6 +56,22 @@ List of currently developed [optimism](https://optimism.io/) bridges.
 - On L1, funds stored are locked in the token bridge proxy (not in the escrow)
 - Prevents withdrawing funds to the contract addresses. Checking for this on Optimism is not [trivial](https://github.com/smartcontractkit/LinkToken/pull/34/files#diff-72ee222f1be88e0683186a97543368a28d53f1fb8cf6943ee1f779c9f6090ec8).
 
+## UniBridge
+
+[Original Optimism PR](https://github.com/ethereum-optimism/contracts/pull/257)  
+[Dedicated Repo](https://github.com/dmihal/unibridge)
+
+### Key Contracts
+
+- [L1TokenBridge](https://github.com/dmihal/unibridge/blob/master/contracts/l1/L1TokenBridge.sol)
+- [L2TokenBridge](https://github.com/dmihal/unibridge/blob/master/contracts/l2/L2TokenBridge.sol)
+
+### Characteristics
+
+- Deposit any ERC20 token in the L1 bridge to mint on L2, preventing new bridge contract for each token
+- Supports ERC20 or ERC777 on L2, with simple converstion between the two
+- L1 bridge can calculate the address of L2 tokens using Create2
+
 ## Other
 
 ### Token Standard
