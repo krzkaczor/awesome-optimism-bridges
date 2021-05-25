@@ -69,6 +69,7 @@ List of currently developed [optimism](https://optimism.io/) bridges.
 ### Characteristics
 
 - Deposit any ERC20 token in the L1 bridge to mint on L2, preventing new bridge contract for each token
+- Each L1 ERC20 gets a generic ERC20 and ERC777 counterpart. It gets created when a new token is being bridged for the first time
 - Supports ERC20 or ERC777 on L2, with simple converstion between the two
 - L1 bridge can calculate the address of L2 tokens using Create2
 
